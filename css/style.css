@@ -21,6 +21,10 @@ html {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 /*Background with panda*/
 .bg-panda {
 	display: block;
@@ -45,6 +49,7 @@ a:focus {
 	font-family: "Roboto Slab", sans-serif;
 	font-size: 4em;
 	font-weight: bold;
+	min-width: 477px;
 	text-shadow: 1px 2px 2px rgba(0,0,0,0.6);
 }
 
@@ -53,6 +58,7 @@ a:focus {
 }
 
 .phone-link {
+	float: right;
 	margin-top: 20px;
 	color: var(--link-default-color);
 	padding: 10px 20px;
@@ -105,19 +111,34 @@ blockquote p {
 	display: inline;
 }
 
-.reason-block, .price-block, .request-block {
+.reason-block,
+.price-block,
+.request-block,
+.review-block,
+.teacher-block,
+.contact-block, 
+.forms-block {
 	padding: 100px 0px;
 }
 
-.reason-block p, .price-block p {
+.reason-block p,
+.price-block p,
+.review-block p,
+.teacher-block p,
+.contact-block p {
 	font-size: 1.2em;
 	line-height: 1.5em;
 }
 
-.reason-block img, .price-block img {
+.reason-block img,
+.price-block img {
 	display: block;
 	width: 250px;
 	height: 250px;
+}
+
+.reason-block img {
+	float: right;
 }
 
 .request-block {
@@ -139,7 +160,8 @@ blockquote p {
 }
 
 .wrapper {
-	margin: 50px 0px;
+	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 .upper-block {
@@ -206,3 +228,75 @@ input {
 	transform: translateX(-50%);
 }
 
+.review-block,
+.contact-block {
+	background: var(--bg-default-color);
+}
+
+.review-block h1 {
+	margin-bottom: 50px;
+}
+
+.review {
+	display: block;
+	position: relative;
+	overflow:hidden;
+	margin-bottom: 20px;
+}
+
+.review img {
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin-right: 20px;
+	width: 150px;
+	border: 0px;
+	border-radius: 50%;
+}
+
+.teacher-block {
+	display: block;
+	background: #fff;
+}
+
+.teacher-block img {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	margin: 30px 0px;
+}
+
+.teacher {
+	display: block;
+	margin-top: 30px;
+}
+
+.map-frame {
+	display: block;
+	width: 100%;
+	height: 300px;
+}
+
+@media screen and (max-width: 990px) {
+	.logo {
+		text-align: center;
+	}
+
+	.phone-block {
+		text-align: center;
+	}
+
+	.phone-block .phone-link {
+		float: none;
+	}
+
+	.reason-block img {
+		float: none;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+	.price-block img {
+		margin: 0 auto;
+	}
+}
